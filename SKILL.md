@@ -10,8 +10,8 @@ metadata:
         "requires": {
           "bins": ["portfolio-manager"],
           "env": [
-            "PORTFOLIO_MANAGER_URL",
             "PORTFOLIO_MANAGER_TOKEN",
+            "PORTFOLIO_MANAGER_URL",
           ]
         },
         "install": [

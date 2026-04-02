@@ -47,6 +47,8 @@ portfolio-manager watchlist list                        # list all watchlists (i
 portfolio-manager watchlist show WATCHLIST_ID           # show entries for a watchlist with price, targets, and notes
 ```
 
+*`list` and `show` support json output with the `--json` flag.*
+
 ### Common path: create a watchlist and populate it
 
 ```bash
@@ -100,6 +102,8 @@ portfolio-manager price TICKER --previous-close       # previous session closing
 portfolio-manager price TICKER --last 1h              # OHLCV history for last period (e.g. 30m, 2h, 1d)
 ```
 
+*Also supports json output with the `--json` flag.*
+
 ---
 
 ## Alert
@@ -114,5 +118,7 @@ portfolio-manager alert add    --kind SMA_deviation --symbol NVDA threshold=0.08
 portfolio-manager alert remove --kind percent_change                    # remove from default config
 portfolio-manager alert remove --kind SMA_deviation --symbol NVDA
 ```
+
+*`list` and `list-detectors` support json output with the `--json` flag.*
 
 *Omitting `--symbol` applies the detector to the default config (all symbols not otherwise configured).*
