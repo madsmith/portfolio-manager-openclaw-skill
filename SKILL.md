@@ -43,3 +43,8 @@ Show watchlist: `portfolio-manager watchlist show <watchlist-id>`
 Get current price: `portfolio-manager price <ticker>`
 Get current price for crypto: `portfolio-manager price -t crypto <ticker>`
 Get previous close price: `portfolio-manager price --previous-close <ticker>`
+Get historical price: `portfolio-manager price --last 1d <ticker>`
+
+## Additional References
+
+For more detailed information, see the [CLI Examples](references/cli-examples.md) document.
