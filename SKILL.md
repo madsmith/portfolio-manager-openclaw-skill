@@ -40,10 +40,11 @@ List portfolios: `portfolio-manager portfolio list`
 List portfolio details: `portfolio-manager portfolio show <portfolio-id>`
 List watchlists: `portfolio-manager watchlist list`
 Show watchlist: `portfolio-manager watchlist show <watchlist-id>`
-Get current price: `portfolio-manager price <ticker>`
-Get current price for crypto: `portfolio-manager price -t crypto <ticker>`
-Get previous close price: `portfolio-manager price --previous-close <ticker>`
-Get historical price: `portfolio-manager price --last 1d <ticker>`
+Get current OHLCV: `portfolio-manager price <ticker>`
+Get current OHLCV for crypto: `portfolio-manager price -t crypto <ticker>`
+Get previous session OHLCV: `portfolio-manager price --previous-close <ticker>`
+Get session OHLCV with pre/after-hours: `portfolio-manager price --open-close <ticker>`
+Get OHLCV range: `portfolio-manager price --last 1mo --span 1d <ticker>`
 
 ## Additional References
 

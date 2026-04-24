@@ -93,16 +93,21 @@ portfolio-manager watchlist alert remove WATCHLIST_ID --ticker AAPL --kind perce
 
 ## Price
 
-Rudimentary price lookups. See `portfolio-manager price -h` for full options.
+All `price` output is OHLCV. See `portfolio-manager price -h` for full options.
 
 ```bash
-portfolio-manager price TICKER                        # current price (stock by default)
+portfolio-manager price TICKER                        # most recent 1m candle (stock by default)
 portfolio-manager price TICKER --type crypto          # asset types: stock, currency, crypto
-portfolio-manager price TICKER --previous-close       # previous session closing price
-portfolio-manager price TICKER --last 1h              # OHLCV history for last period (e.g. 30m, 2h, 1d)
+portfolio-manager price TICKER --previous-close       # previous session OHLCV
+portfolio-manager price TICKER --open-close           # today's session OHLCV including pre-market and after-hours
+portfolio-manager price TICKER --open-close --time 2026-01-15  # specific date session OHLCV with pre/after-hours
+portfolio-manager price TICKER --time 2026-01-15      # single candle at a historical date (default span: 1m)
+portfolio-manager price TICKER --time 2026-01-15 --span 1d     # single daily candle at a historical date
+portfolio-manager price TICKER --last 1mo --span 1d   # range of daily candles for the last month
+portfolio-manager price TICKER --last 7d --span 1h    # range of hourly candles for the last 7 days
 ```
 
-*Also supports json output with the `--json` flag.*
+*Also supports `--json` output.*
 
 ---
 
