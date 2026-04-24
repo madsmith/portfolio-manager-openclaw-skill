@@ -1,7 +1,7 @@
 ---
 name: portfolio-manager
 description: >
-  Manage a portfolio monitored by portfolio monitor (separate app).  This is a CLI interface to the portfolio monitor that allows access to portfolio data, watchlists, pricing information, and other portfolio-related data.
+  Manage portfolios and watchlists via the portfolio-manager CLI. Access detailed holdings, P&L, and OHLCV pricing data for securities (including pre/after-hours and historical ranges). Create and maintain watchlists with targets and notes, and configure asset-specific or global price alerts.
 metadata:
   {
     "openclaw":
@@ -48,4 +48,4 @@ Get OHLCV range: `portfolio-manager price --last 1mo --span 1d <ticker>`
 
 ## Additional References
 
-For more detailed information, see the [CLI Examples](references/cli-examples.md) document.
+For more detailed information, see the [CLI Examples](references/cli_examples.md) document.
