@@ -109,6 +109,53 @@ portfolio-manager price TICKER --last 7d --span 1h    # range of hourly candles 
 
 *Also supports `--json` output.*
 
+```bash
+% portfolio-manager price AAPL --json          
+{
+  "symbol": {
+    "ticker": "AAPL",
+    "type": "stock"
+  },
+  "timestamp": "2026-04-24T18:00:00+00:00",
+  "open": 269.803,
+  "high": 269.875,
+  "low": 269.71,
+  "close": 269.72,
+  "price": 269.72,
+  "volume": 58367.395367
+}
+
+% portfolio-manager price AAPL --json --last 3m
+[
+  {
+    "symbol": {
+      "ticker": "AAPL",
+      "type": "stock"
+    },
+    "timestamp": "2026-04-24T17:59:00+00:00",
+    "open": 269.89,
+    "high": 269.89,
+    "low": 269.76,
+    "close": 269.8055,
+    "price": 269.8055,
+    "volume": 51765.350678
+  },
+  {
+    "symbol": {
+      "ticker": "AAPL",
+      "type": "stock"
+    },
+    "timestamp": "2026-04-24T18:00:00+00:00",
+    "open": 269.803,
+    "high": 269.875,
+    "low": 269.71,
+    "close": 269.72,
+    "price": 269.72,
+    "volume": 58367.395367
+  }
+]
+```
+
 ---
 
 ## Alert
